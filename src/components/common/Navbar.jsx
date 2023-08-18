@@ -19,6 +19,7 @@ function Navbar() {
 
   const [subLinks, setSubLinks] = useState([])
   const [loading, setLoading] = useState(false)
+  const [visible, setIsVisible] = useState(false)
 
   useEffect(() => {
     ;(async () => {
@@ -141,10 +142,22 @@ function Navbar() {
           )}
           {token !== null && <ProfileDropdown />}
         </div>
-        <button className="mr-4 md:hidden">
+        <button className="mr-4 md:hidden" onClick={()=> setIsVisible(!visible)}>
           <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
         </button>
       </div>
+      {
+        visible && <div className="w-[100vw] h-[100vh] bg-richblack-900 absolute z-10 top-[6%]">
+          <div className="flex items-center justify-center my-auto mt-11">
+          <ul className="text-richblack-25">
+            <li>Home</li>
+            <li>About</li>
+            <li>Section</li>
+            <li>Log</li>
+          </ul>
+          </div>
+        </div>
+      }
     </div>
   )
 }
