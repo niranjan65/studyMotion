@@ -31,10 +31,7 @@
     "video-react": "^0.16.0",
     "web-vitals": "^2.1.4"
   },
-  "repository": {
-    
-  },
-  
+  "repository": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
