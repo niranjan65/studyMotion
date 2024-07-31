@@ -175,7 +175,7 @@ function CourseDetails() {
                 Rs. {price}
               </p>
               <button className="yellowButton" onClick={handleBuyCourse}>
-                Buy Now
+                Buy Now 
               </button>
               <button className="blackButton">Add to Cart</button>
             </div>

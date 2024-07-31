@@ -16,6 +16,8 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+  console.log("course details......", course)
+
   const {
     thumbnail: ThumbnailImage,
     price: CurrentPrice,
@@ -79,7 +81,7 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
             </button>
             {(!user || !course?.studentsEnrolled.includes(user?._id)) && (
               <button onClick={handleAddToCart} className="blackButton">
-                Add to Cart
+                Add to Cart 
               </button>
             )}
           </div>

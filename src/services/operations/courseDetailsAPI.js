@@ -24,6 +24,7 @@ const {
   LECTURE_COMPLETION_API,
 } = courseEndpoints
 
+// fetch all courses
 export const getAllCourses = async () => {
   const toastId = toast.loading("Loading...")
   let result = []
@@ -41,6 +42,7 @@ export const getAllCourses = async () => {
   return result
 }
 
+// fetching the course details
 export const fetchCourseDetails = async (courseId) => {
   const toastId = toast.loading("Loading...")
   //   dispatch(setLoading(true));
